@@ -1,29 +1,27 @@
-uuid-runtime
-libzmq3-dev
-libzmq3
-subversion
-libjansson4
-libjansson-dev
-liburiparser-dev
-liburiparser1
-cmake
-libavahi-client3
-libavahi-client-dev
-libusb-1.0-0-dev
-libgtk2.0-dev
-tcl8.5-dev
-tk8.5-dev
-bwidget
-readline-common
-libreadline-dev
-python-tk
-mesa-common-dev
-libglu1-mesa-dev
-libxmu-headers
-cython
-avahi-discover
-
-
+uuid-runtime \
+libzmq3-dev \
+libzmq3 \
+subversion \
+libjansson4 \
+libjansson-dev \
+liburiparser-dev \
+liburiparser1 \
+cmake \
+libavahi-client3 \
+libavahi-client-dev \
+libusb-1.0-0-dev \
+libgtk2.0-dev \
+tcl8.5-dev \
+tk8.5-dev \
+bwidget \
+readline-common \
+libreadline-dev \
+python-tk \
+mesa-common-dev \
+libglu1-mesa-dev \
+libxmu-headers \
+cython \
+avahi-discover \
 libmodbus-dev \
 libxmu-dev \
 libxaw7-dev \
