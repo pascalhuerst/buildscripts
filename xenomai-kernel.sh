@@ -65,14 +65,15 @@ git checkout -b "${LINUX_BRANCH_NAME}" "v${LINUX_VER}"
 ${XENOMAI_DIR}/scripts/prepare-kernel.sh --arch=x86 --adeos=${XENOMAI_DIR}/ksrc/arch/x86/patches/ipipe-core-${LINUX_VER}-x86-4.patch --linux=${LINUX_DIR}
 git add -A
 git commit -m "Xenomai-${XENOMAI_VER_FINAL} Patches Applied"
-cp ${WORKING_DIR}/configs/my_config ${LINUX_DIR}/.config
+
+LINUX_CONFIG=${WORKING_DIR}/configs/linux-${LINUX_VER}-xenomai-${XENOMAI_VER_FINAL}
+if [ ! -f ${LINUX_CONFIG} ]; then
+	printf "[Error] Config not found: %s" "${LINUX_CONFIG}"
+	exit 1;
+fi
+
+cp ${LINUX_CONFIG} ${LINUX_DIR}/.config
 make -C ${LINUX_DIR} oldconfig
 CONCURRENCY_LEVEL=8 CLEAN_SOURCE=no fakeroot make-kpkg --initrd --append-to-version -xenomai-${XENOMAI_VER_FINAL} --revision 1.0 kernel_image kernel_headers
 mv "${WORKING_DIR}/*.deb" "${PACKAGES_DIR}"
-
-
-
-
-
-
 
