@@ -34,3 +34,4 @@ python-simplejson
 libtk-img
 libboost-thread-dev
 libxenomai-dev
+libssl-dev
