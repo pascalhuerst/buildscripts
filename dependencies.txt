@@ -26,7 +26,6 @@ libmodbus-dev
 libxmu-dev
 libxaw7-dev
 libboost-serialization-dev
-libsodium-dev
 python-zmq
 python-setuptools
 libudev-dev
