@@ -2,6 +2,7 @@ avahi-discover
 bwidget
 cmake
 cython
+kernel-package
 libavahi-client-dev
 libavahi-client3
 libboost-serialization-dev
